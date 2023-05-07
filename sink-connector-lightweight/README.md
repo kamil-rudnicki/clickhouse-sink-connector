@@ -26,9 +26,12 @@ export metrics.port=8083
 After the environment variables are set, start the docker container
 A Sample docker-compose is provided , it starts the docker container \
 `registry.gitlab.com/altinity-public/container-images/clickhouse_debezium_embedded:latest`
+
+You have to use docker-compose version 1.X.
+
 ```
-cd sink-connector-lightweight
-cd docker
+cd sink-connector-lightweight/docker
+export SINK_LIGHTWEIGHT_VERSION=latest
 ./start-docker-compose.sh
 ```
 
